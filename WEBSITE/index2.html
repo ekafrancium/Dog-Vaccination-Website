@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input::placeholder{
+            color:wheat;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .fo{
+            color: rgb(39, 38, 35);
+        }
+    </style>
+    <style>
+        body {
+          font-family: 'Lato', sans-serif;
+        }
+        
+        .overlay{
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index:1 ;
+          top: 0;
+          left: 0;
+          background-color: rgba(0,0,0, 0.95);
+          overflow-x: hidden;
+          transition: 0.5s;
+        }
+        
+
+        .overlay1 {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          background-color: rgba(0,0,0, 0.95);
+          overflow-x: hidden;
+          transition: 0.5s;
+        }
+        
+
+        .overlay-content , .overlay-content1{
+          position: relative;
+          top: 25%;
+          width: 100%;
+          text-align: center;
+          margin-top: 30px;
+        }
+        
+        .overlay a , .overlay1 a{
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .overlay a:hover, .overlay a:focus ,.overlay1 a:hover , .overlay1 a:focus {
+          color: #f1f1f1;
+        }
+        
+        .overlay .closebtn , .overlay1 .closebtn1{
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+
+        @media screen and (max-height: 450px) {
+          .overlay1 a {font-size: 20px}
+          .overlay1 .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+        </style>
+</head>
+<body> 
+  <div style="font-size: 25px;font-weight: bolder;text-align: center; padding: 30px;"">
+      <i style="color: rgb(45, 163, 41);">" Dogs can be many things. They are there to cheer you up when you feel blue, they shower unconditional love and make you want to be a better person. But these furry friends are not always lucky enough to get a loving master. They are abandoned many a times and are in need of the love and support they deserve. Help these little ones find a forever home "</i>
+    <div style="padding-top: 170px;"></div>
+    </div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <form id="fo" class="fo">
+                <div style="width: 50%; align-items:center; padding-left: 280px;">
+                    <h1 style="font-size:70px;color: wheat;">ENTER DETAILS</h1>
+                    <p style="font-style: italic;">  <input type="text" name="name" required placeholder="Name" style="background: none; border: none; outline: none; "></p>
+                    <p style="font-style: italic;"> <input type="text" name="pname" required placeholder="Pet's Name" style="background: none; border: none; outline: none; "></p>
+                    <p style="font-style: italic;"><input type="text" name="breed" required placeholder="Breed" style="background: none; border: none; outline: none; "></p>
+                    <p style="font-style: italic;"><input type="number" name="age" required placeholder="Age" style="background: none; border: none; outline: none; "></p>
+                    <p style="font-style: italic; color: wheat;">Gender : <input type="radio" name="Gender" id="Male" style="background: none; border: none; outline: none; "> <label for="Male">Male</label> <input type="radio" id="Female" name="Gender" style="background: none; border: none; outline: none; "> <label for="Female">Female</label> </p>
+                    <p style="font-style: italic;">  <input type="text" name="cname" required placeholder="City Name" style="background: none; border: none; outline: none; "></p>
+                    <p style="font-style: italic;">  <input type="text" name="sname" required placeholder="State" style="background: none; border: none; outline: none; "></p>
+                    <p style="font-style: italic;color: wheat;">Add Images :    <input type="file" name="img" required id="file" name="file" multiple accept="image/png, image/jpeg, image/jpg, image/webp" style="background: none; border: none; outline: none; ">                    </p>
+                    <input style="color: rgb(152, 167, 20); border-radius: 10px; background:none;cursor:pointer;" type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+</div>
+
+  <span style="font-size: 30px ;color: blanchedalmond; font-style: italic; cursor:pointer ;margin-left: 400px; " onclick="openNav()">
+        <div style="border: 2px solid black;border-radius: 25px; height: 40px;width: 170px; text-align: center;margin-left: 300px; color: rgb(17, 53, 15);">Giveaway</div>
+  </span>
+
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+
+<div id="myNav1" class="overlay1">
+    <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">&times;</a>
+    <div class="overlay-content1">
+        <!--
+            content
+        -->
+        <form id="fo" class="fo">
+            <div style="width: 50%; align-items:center; padding-left: 300px;">
+                <h1 style="font-size:70px;color: wheat;">Enter Details</h1>
+                <p style="font-style: italic;">  <input type="text" name="name" required placeholder="Name" style="background: none; border: none; outline: none; "></p>
+                <p style="font-style: italic;"><input type="text" name="breed" required placeholder="Breed" style="background: none; border: none; outline: none; "></p>
+                <p style="font-style: italic;">  <input type="text" name="cname" required placeholder="City Name" style="background: none; border: none; outline: none; "></p>
+                <p style="font-style: italic;"><input type="number" name="age" required placeholder="Age" style="background: none; border: none; outline: none; "></p>
+                <p style="font-style: italic;">  <input type="text" name="sname" required placeholder="State" style="background: none; border: none; outline: none; "></p>
+                <p style="font-style: italic;color: wheat;">Gender : <input type="radio" name="Gender" id="Male" style="background: none; border: none; outline: none; "> <label for="Male">Male</label> <input type="radio" id="Female" name="Gender" style="background: none; border: none; outline: none; "> <label for="Female">Female</label> </p>
+                <input style="color: rgb(152, 167, 20); border-radius: 10px; background:none;cursor:pointer;" type="submit" value="Adopt">
+            </div>
+        </form>
+    </div>
+</div>
+
+<span style="font-size: 30px ;color: blanchedalmond; font-style: italic; cursor:pointer ;margin-left: 400px; " onclick="openNav1()">
+    <div style="border: 2px solid black;border-radius: 25px; height: 40px;width: 170px; text-align: center;margin-left: 1000px;color: rgb(17, 53, 15);">Adopt</div>
+</span>
+
+<script>
+function openNav1() {
+    document.getElementById("myNav1").style.width = "100%";
+}
+
+function closeNav1() {
+    document.getElementById("myNav1").style.width = "0%";
+}
+</script>
+<img src="bg6.png" alt="" style="position:fixed;left: 0px;top: 0px;z-index: -1;width: 100%;height: 100%;-webkit-filter: blur(5px);filter: blur(5px);">
+<br><br><br><br><br><br><br>
+<ul class="social" style="list-style: none; padding: 50px; position: absolute;z-index: 10;display: flex;justify-content: center;align-items: center;">
+  <li style="margin-left: 20px;" ><a href="https://www.facebook.com/"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+  <li style="margin-left: 20px;"><a href="https://www.twitter.com/"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+  <li style="margin-left: 20px;"><a href="https://www.instagram.com/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+</ul>
+</body>
+</html>
+

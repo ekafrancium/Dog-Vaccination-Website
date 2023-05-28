@@ -1,0 +1,2 @@
+INSERT INTO `user` (`S NO.`, `FIRST_NAME`, `LAST_NAME`, `EMAIL`, `PASSWORD`, `CONFIRM_PASSWORD`, `CONTACT_NO.`) VALUES ('1', 'aditi', 'goswami', 'bhartiaditi24@gmail.com', 'universe', 'universe', '8954749541');
+INSERT INTO `user` (`S NO.`, `FIRST_NAME`, `LAST_NAME`, `EMAIL`, `PASSWORD`, `CONFIRM_PASSWORD`, `CONTACT_NO.`) VALUES ('2', 'anshika', 'gupta', 'anshika6112@gmail.com', 'unicorn', 'unicorn', '8448016811');

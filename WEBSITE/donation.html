@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <style>
+        body {
+          font-family: 'Lato', sans-serif;
+        }
+        input{
+            color: wheat;
+        }
+        ::-webkit-calendar-picker-indicator {
+           filter: invert(1);
+        }
+        .overlay{
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index:1 ;
+          top: 0;
+          left: 0;
+          background-color: rgba(0,0,0, 0.95);
+          overflow-x: hidden;
+          transition: 0.5s;
+        }
+        
+
+        .overlay1 {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0, 0.95);
+          overflow-x: hidden;
+          transition: 0.5s;
+        }
+        
+
+        .overlay-content , .overlay-content1{
+          position: relative;
+          top: 25%;
+          width: 100%;
+          text-align: center;
+          margin-top: 30px;
+        }
+        
+        .overlay a , .overlay1 a{
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .overlay a:hover, .overlay a:focus ,.overlay1 a:hover , .overlay1 a:focus {
+          color: #f1f1f1;
+        }
+        
+        .overlay .closebtn , .overlay1 .closebtn1{
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+
+        @media screen and (max-height: 450px) {
+          .overlay1 a {font-size: 20px}
+          .overlay1 .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+        </style>
+
+</head>
+<body>
+ <h1 align="center">
+       <i style="text-align: center;color: wheat;"> YOUR HELP IS NEEDED !! </i><br>
+       <i style="color: wheat;">Help these little speechless angels.</i> <br><i style="color: wheat;">Every small amount of contributions matters and are appreciated by us. </i><br>
+      </h1>
+      <br><br>
+     <fieldset style="padding: 10px; padding-left: 50px;border-radius: 30px; width: 700px;margin-left: 340px;">   
+           <legend style="text-align: center; color: wheat;">STEPS TO FOLLOW</legend>
+        <p style="border-bottom: 2px solid black;background: none; border: none; outline: none;color: wheat; "> 1 : Choose a method either upi or QR </p>
+        <p style="border-bottom: 2px solid black;background: none; border: none; outline: none; color: wheat;"> 2 : For UPI , click the UPI option and pay the desired amount</p>
+        <p style="border-bottom: 2px solid black;background: none; border: none; outline: none; color: wheat;"> 3 : For QR ,  click on QR, scan it and pay the required amount</p>
+        <p style="border-bottom: 2px solid black;background: none; border: none; outline: none; color: wheat;"> 4 : Validate your transaction by providing the required details in the validation box provided below</p>
+        <p style="border-bottom: 2px solid black;background: none; border: none; outline: none;color: wheat; "> * If you want to doante the amount ANNONYMOUSLY you can fill the name feild with the value NIL</p>
+   </fieldset> 
+    <br>      <br>      <br> <br>
+
+
+
+
+
+    <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">NAVYA</a>
+                <a href="#">KHUSHI JAIN</a>
+                <a href="#">KHUSHI GUPTA</a>
+                <a href="#">LAKSHAY ANAND</a>
+            </div>
+    </div>
+    
+      <span style="font-size: 30px ;color: blanchedalmond; font-style: italic; cursor:pointer ;margin-left: 700px;" onclick="openNav()"> UPI</span><br><br><br>
+
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "50%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+
+
+
+
+<div id="myNav1" class="overlay1">
+    <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">&times;</a>
+    <div class="overlay-content1">
+        <a href="#"><img src="qr.jpeg" alt="" style="height: 300px ; width: 300px;"></a>
+    </div>
+</div>
+
+<span style="font-size: 30px; color: blanchedalmond;font-style: italic; cursor:pointer ; margin-left: 700px;" onclick="openNav1()"> QR</span>
+
+<script>
+    function openNav1() {
+        document.getElementById("myNav1").style.width = "50%";
+    }
+
+    function closeNav1() {
+        document.getElementById("myNav1").style.width = "0%";
+    }
+</script>
+
+
+<!--
+
+    <div style="padding: 50px;">
+        <img id="box" src="qr.jpeg" height="375px" width="400px" style="float: right; margin-left: 200px;margin-right: 40px; border: 5px solid brown; border-radius: 20px;">
+            
+            <div style="padding: 40px; width: auto;height: 300px; border-radius: 20px; margin-left: 50px;">
+                <legend style="text-align: center;"><h2>UPI IDs</h2></legend>
+                <p style="font-size: xx-large; text-indent: 100px;">aditi </p> 
+                <p style="font-size: xx-large; text-indent: 100px;">anshika </p>
+                <p style="font-size: xx-large; text-indent: 100px;">divyanshi </p>
+                <p style="font-size: xx-large; text-indent: 100px;">ujjwal </p>
+            </div>
+    </div>
+ -->
+    <br>      <br>      <br> 
+    <form>
+        <div style="width: 500px; padding: 50px;">
+            <h1 style="color: wheat;">VALIDATION PLEASE</h1>
+            <p style="border-bottom: 2px solid black;font-style: italic; color: wheat;" > Trx id : <input type="text" name="Trx_id" required placeholder="transaction no." style="background: none; border: none; outline: none; "></p>
+           
+
+            <p style="border-bottom: 2px solid black;font-style: italic;color: wheat;">Date   : <input type="text" name="Date" onfocus="(this.type='date')" placeholder="dd/mm/yyyy" required style="background: none; border: none; outline: none; "></p>
+
+
+            <p style="border-bottom: 2px solid black;font-style: italic;color: wheat;">Amount :<input type="text" name="Amount" required placeholder="amount" style="background: none; border: none; outline: none; "></p>
+            <p style="border-bottom: 2px solid black;font-style: italic;color: wheat;">Name  : <input type="text" name="Name" required placeholder="name" style="background: none; border: none; outline: none; "></p>
+            <input style="color: rgb(152, 167, 20); border-radius: 10px; background:none;cursor:pointer;" type="submit" value="Request Validatation">
+        </div>
+    </form>
+     <br>      <br>      <br>  <BR> <BR>    <br>      <br>      
+
+   
+     </div>
+     
+     <ul class="social" style="list-style: none; padding: 50px; position: absolute;z-index: 10;display: flex;justify-content: center;align-items: center;">
+       <li style="margin-left: 20px;" ><a href="https://www.facebook.com/"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+       <li style="margin-left: 20px;"><a href="https://www.twitter.com/"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+       <li style="margin-left: 20px;"><a href="https://www.instagram.com/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+     </ul>
+    
+
+<img src="bg4.png" alt="" style="position:fixed;left: 0px;top: 0px;z-index: -1;width: 100%;height: 100%;-webkit-filter: blur(5px);filter: blur(5px);">
+
+</body>
+</html>

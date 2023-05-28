@@ -1,0 +1,56 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FURWAY</title>
+      <link rel="icon" href="favicon.png" type="image/png">
+      <link rel="stylesheet" href="stylee.css">     
+  </head>
+  <body>
+      <section class="showcase">
+        <header>
+          <h2 class="logo"></h2>
+          <div class="toggle"></div>
+        </header>
+      <video src="bgvideo.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>FURWAY:</h2> 
+        <h3>HATCH FOR HOUNDS</h3>
+        <p>
+            Each and every pet requires good health along with special care and attention. These days people bring home a pet but they do not have the proper proficiency of parenting. Through our project
+            ”Furway: Hatch for the Hound” we will be providing accurate information regarding parenting of dogs.
+        </p>
+        <a href="login.html">LOGIN</a>
+        <a href="signup.html">SIGN IN</a>   
+      </div>
+      <ul class="social">
+        <li><a href="https://www.facebook.com/"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+        <li><a href="https://www.twitter.com/"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+        <li><a href="https://www.instagram.com/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+      </ul>
+    </section>
+    <div class="menu">
+      <ul>
+        <li><a href="vaccination.html">Vaccination Plan</a></li>
+        <li><a href="Diet plan.html">Diet Plan</a></li>
+        <li><a href="do's and don'ts.html">Do's and Dont's</a></li>
+        <li><a href="donation.html">Donation</a></li>
+        <li><a href="index2.html1">Adoption</a></li>
+      </ul>
+    </div>
+    <script>
+      const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      showcase.classList.toggle('active');
+      })
+    </script>
+
+  </body>
+  </html>
